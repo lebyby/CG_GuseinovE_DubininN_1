@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Лабораторная работа по компьютерной графике №1</title>
+</head>
+<body>
+<div class="container">
+
+    <!-- Координата вершины A треугольной пирамиды-->
+
+    <div class="drawing_figure">
+        <div class="input_group">
+            <canvas id="canvasFigure" style = "weight: 800px; height: 500px"></canvas>
+        </div>
+        <div>
+
+            <h1>Отображение фигуры на плоскостях</h1>
+            <h4>(Вводите значения от -200 до 200 для наглядности)</h4>
+            <div class="input-group-prepend">
+                <span class="input-group-text" >Координата вершины <span class="letter"> A </span>треугольной пирамиды </span>
+            </div>
+
+            <div class="number_input">
+                x <input type="number" id="xPoint1" value="0" min="-200" max="200" onchange="draw_figure(ctx_F, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4); draw_plane(ctx_P, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4);" >
+
+                y <input type="number" id="yPoint1" value="0" min="-200" max="200" onchange="draw_figure(ctx_F, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4); draw_plane(ctx_P, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4);" >
+
+                z <input type="number" id="zPoint1" value="0" min="-200" max="200" onchange="draw_figure(ctx_F, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4); draw_plane(ctx_P, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4);">
+            </div>
+            <br>
+            <!-- Координата вершины B треугольной пирамиды -->
+
+            <div class="input-group-prepend">
+                <span class="input-group-text" >Координата вершины <span class="letter"> B </span> треугольной пирамиды</span>
+            </div>
+
+            <div class="number_input">
+                x <input type="number" id="xPoint2" value="0" min="-200" max="200" onchange="draw_figure(ctx_F, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4); draw_plane(ctx_P, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4);" >
+
+                y <input type="number" id="yPoint2" value="0" min="-200" max="200" onchange="draw_figure(ctx_F, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4); draw_plane(ctx_P, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4);" >
+
+                z <input type="number" id="zPoint2" value="0" min="-200" max="200" onchange="draw_figure(ctx_F, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4); draw_plane(ctx_P, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4);" >
+            </div>
+            <br>
+            <!-- Координата вершины C треугольной пирамиды -->
+
+            <div class="input-group-prepend">
+                <span class="input-group-text" >Координата вершины <span class="letter"> C </span> треугольной пирамиды</span>
+            </div>
+
+            <div>
+                x <input type="number" id="xPoint3" value="0" min="-200" max="200" onchange="draw_figure(ctx_F, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4); draw_plane(ctx_P, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4);" >
+
+                y <input type="number" id="yPoint3" value="0" min="-200" max="200" onchange="draw_figure(ctx_F, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4); draw_plane(ctx_P, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4);" >
+
+                z <input type="number" id="zPoint3" value="0" min="-200" max="200" onchange="draw_figure(ctx_F, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4); draw_plane(ctx_P, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4);" >
+            </div>
+            <br>
+            <!-- Координата вершины D треугольной пирамиды -->
+
+            <div class="input-group-prepend">
+                <span class="input-group-text" >Координата вершины <span class="letter"> D </span> треугольной пирамиды</span>
+            </div>
+
+            <div>
+                x <input type="number" id="xPoint4" value="0" min="-200" max="200" onchange="draw_figure(ctx_F, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4); draw_plane(ctx_P, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4);" >
+
+                y <input type="number" id="yPoint4" value="0" min="-200" max="200" onchange="draw_figure(ctx_F, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4); draw_plane(ctx_P, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4); " >
+
+                z <input type="number" id="zPoint4" value="0" min="-200" max="200" onchange="draw_figure(ctx_F, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4); draw_plane(ctx_P, xPoint1, yPoint1, zPoint1, xPoint2, yPoint2, zPoint2, xPoint3, yPoint3, zPoint3, xPoint4, yPoint4, zPoint4);" >
+            </div>
+            <br>
+        </div>
+        <!-- Скрипт -->
+        <script src="scripts/draw_figure.js"></script>
+    </div >
+    <br>
+
+    <div class="drawing_plane">
+        <canvas id="canvasPlane" style = "weight: 1600px; height: 600px;"></canvas>
+        <!-- Скрипт -->
+        <script src="scripts/draw_plane.js"></script>
+    </div>
+
+</div>
+</body>
+</html>
